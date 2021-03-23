@@ -1,0 +1,12 @@
+S 
+S AB 0
+A CD CF 0
+B c EB 0
+C a 0
+D b 0
+E c 0
+F AD 0
+0
+
+8
+acbycaba	acbacbab
