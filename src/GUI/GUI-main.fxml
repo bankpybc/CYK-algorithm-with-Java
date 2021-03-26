@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" styleClass="mainanchor" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller">
+    <children>
+        <MenuBar prefHeight="25.0" prefWidth="1280.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#new_rule" text="New" />
+                        <MenuItem mnemonicParsing="false" onAction="#open" text="Open..." />
+                        <MenuItem mnemonicParsing="false" onAction="#save" text="Save" />
+                        <MenuItem mnemonicParsing="false" onAction="#save_as" text="Save as..." />
+                        <MenuItem mnemonicParsing="false" onAction="#closeButtonEvent" text="Close" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                  <MenuItem onAction="#help" mnemonicParsing="false" text="CYK help" />
+                        <MenuItem onAction="#about" mnemonicParsing="false" text="About program" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <AnchorPane layoutY="25.0" prefHeight="695.0" prefWidth="350.0" styleClass="sidebar">
+            <children>
+                <TextArea fx:id="input_cnf" layoutX="75.0" layoutY="148.0" prefHeight="400.0" prefWidth="200.0" promptText="INSERT CNF HERE..." text="S -&gt;" />
+                <TextField fx:id="input_string" layoutX="75.0" layoutY="93.0" prefHeight="30.0" prefWidth="200.0" promptText="INSERT STRING HERE..." />
+                <Button layoutX="100.0" layoutY="570.0" mnemonicParsing="false" onAction="#solve_press" prefHeight="25.0" prefWidth="150.0" text="Solve" />
+            <Button layoutX="100.0"  layoutY="629.0" mnemonicParsing="false" onAction="#random_press" prefHeight="25.0" prefWidth="150.0" text="Random" />
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="350.0" layoutY="25.0" prefHeight="695.0" prefWidth="930.0">
+            <children>
+                <ScrollPane fx:id="scrollpane" layoutX="40.0" layoutY="48.0" prefHeight="500.0" prefWidth="850.0">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+                    </content>
+                </ScrollPane>
+                <Button fx:id="back_button" layoutX="100.0" layoutY="593.0" mnemonicParsing="false" onAction="#back_table" prefHeight="25.0" prefWidth="150.0" text="Back" />
+                <Button fx:id="next_button" layoutX="700.0" layoutY="592.0" mnemonicParsing="false" onAction="#next_table" prefHeight="25.0" prefWidth="150.0" text="Next" />
+                <Button fx:id="finish_button" layoutX="390.0" layoutY="594.0" mnemonicParsing="false" onAction="#finish_table" prefHeight="25.0" prefWidth="150.0" text="Finish" />
+            <Text fx:id="number_page" boundsType="LOGICAL_VERTICAL_CENTER" disable="true" layoutX="40.0" layoutY="578.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0/0" textAlignment="CENTER" wrappingWidth="850.0" />
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
